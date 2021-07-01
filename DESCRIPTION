@@ -1,0 +1,14 @@
+Package: stats250sbi
+Type: Package
+Title: Functions for Use in STATS 250 at the University of Michigan
+Version: 1.0.0
+Author: Nicholas J. Seewald
+Maintainer: Nicholas J. Seewald <nseewald@umich.edu>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+
