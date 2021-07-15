@@ -1,5 +1,40 @@
-if (!("checkmate" %in% installed.packages()))
-  install.packages('checkmate')
+#' Plot a t Distribution with Shading
+#'
+#' Draw a t distribution curve and optional shading of a particular region.
+#'
+#' @param df The degrees of freedom of the t distribution to plot
+#' @param shadeValues Either a single number or a vector of two numbers which
+#' identify the boundary or boundaries of the shaded region
+#' @param direction A character string (in quotes) indicating the direction from
+#' shadeValues to shade under the normal curve. Must be one of "\code{less}",
+#' "\code{greater}", "\code{beyond}", or "\code{between}". See Details below.
+#' @param col.shade The color of the shaded region
+#' @param ... Other graphical parameters passed to \link[base]{plot} (e.g.,
+#' \code{xlim}, \code{main}, etc.). Generally, these will not control the
+#' shading, only the normal distribution curve.
+#'
+#' @return A plot of a normal distribution curve with optional shading.
+#' @export
+#'
+#' @details The \code{direction} argument is used to control the region under
+#' the normal distribution curve which is shaded. If \code{shadeValues} is a
+#' single number, \code{direction} must be either "\code{less}" (in which case
+#' the shaded region will be to the *left* of \code{shadeValues}) or
+#' "\code{greater}" (the shaded region will be to the *right* of
+#' \code{shadeValues}).
+#'
+#' If `shadeValues` is a *vector*, then `direction` must be either "`between`"
+#' (the region between the two numbers in `shadeValues` will be shaded) or
+#' "`beyond`" (the region below the smaller and above the larger of the
+#' `shadeValues` will be shaded).
+#'
+#' @seealso \link{plot_norm}
+#' @examples
+#' # Shade the region below 1.4 on the t(4) distribution.
+#' plot_t(df = 4, shadeValues = 1.4, direction = "less")
+#'
+#' # Shade the region between -2 and 0.5 on the t(13) distribution.
+#' plot_t(df = 13, shadeValues = c(-2, 0.5), direction = "between")
 
 plot_t <- function(df, shadeValues = NULL,
                    direction = c("less", "greater", "beyond", "between"),

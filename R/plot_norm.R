@@ -29,6 +29,8 @@
 #' "`beyond`" (the region below the smaller and above the larger of the
 #' `shadeValues` will be shaded).
 #'
+#' @seealso \link{plot_t}
+#'
 #' @examples
 #' # Probability of a value being between 3 and 3.5 in a N(3.39, 0.55) distribution
 #' plot_norm(mean = 3.39, sd = 0.55,
@@ -40,6 +42,7 @@
 #' plot_norm(shadeValues = 1.96,
 #'           direction = "greater",
 #'           col.shade = "peachpuff")
+
 plot_norm <- function(mean = 0, sd = 1, shadeValues = NULL,
                       direction = c("less", "greater", "beyond", "between"),
                       col.shade = "cornflowerblue",
