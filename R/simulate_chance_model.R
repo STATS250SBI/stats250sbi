@@ -1,7 +1,5 @@
 #' Simulate from a Chance Model
 #'
-#'
-#'
 #' @param chanceSuccess A number between 0 and 1 representing the probability of
 #' observing a "success" (however defined). Can be a decimal or a fraction;
 #' e.g., 0.55 or 55/100.
